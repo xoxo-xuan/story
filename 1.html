@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lily's Adventure</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            background-color: #45a049;
+        }
+
+        /* Container for content */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .scene {
+            margin-bottom: 30px;
+        }
+
+        .scene img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            nav a {
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 5px;
+            }
+
+            nav a {
+                padding: 6px 10px;
+                font-size: 16px;
+            }
+
+            footer {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#scene1">Scene 1</a>
+        <a href="#scene2">Scene 2</a>
+        <a href="#scene3">Scene 3</a>
+        <a href="#scene4">Scene 4</a>
+        <a href="#scene5">Scene 5</a>
+        <a href="#scene6">Scene 6</a>
+        <a href="#scene7">Scene 7</a>
+        <a href="#scene8">Scene 8</a>
+        <a href="#scene9">Scene 9</a>
+        <a href="#scene10">Scene 10</a>
+    </nav>
+
+    <div class="container">
+        <div id="scene1" class="scene">
+            <h2>Scene 1: Lily's Morning</h2>
+            <p>Lily wakes up early and gets ready for a day full of adventures. With her mom's help, she puts on her favorite blue dress and prepares for a healthy breakfast.</p>
+            <img src="1.jpg" alt="Breakfast">
+        </div>
+
+        <div id="scene2" class="scene">
+            <h2>Scene 2: Lily Learns to Tidy Up</h2>
+            <p>Lily’s room is a bit messy, and her mom tells her the importance of keeping things tidy. Lily cleans up her toys, books, and clothes, feeling proud and accomplished.</p>
+            <img src="2.jpg" alt="Room">
+        </div>
+
+        <div id="scene3" class="scene">
+            <h2>Scene 3: Lily in the Garden</h2>
+            <p>Lily goes into the garden and finds flowers blooming and butterflies flying. She learns that flowers need sunlight and water to grow, so she helps her mom water the plants.</p>
+            <img src="3.jpg" alt="Garden">
+        </div>
+
+        <div id="scene4" class="scene">
+            <h2>Scene 4: Lily Works with a Friend</h2>
+            <p>Lily and her friend, Little Bear, are playing with building blocks, but the tower they built is too high and about to fall. Lily learns that working together helps build stronger towers, and they both work hard to finish the big tower.</p>
+            <img src="4.jpg" alt="Blocks">
+        </div>
+
+        <div id="scene5" class="scene">
+            <h2>Scene 5: Lily Learns to Share</h2>
+            <p>Lily meets a little girl at the park, and they both have a beautiful balloon. Lily learns the joy of sharing and gives her balloon to the little girl, receiving a big smile in return.</p>
+            <img src="5.jpg" alt="Balloon">
+        </div>
+
+        <div id="scene6" class="scene">
+            <h2>Scene 6: Lily Discovers Something New</h2>
+            <p>While playing in the forest, Lily discovers a small bird. The bird seems lonely, so Lily learns to respect animals and helps it find its way home.</p>
+            <img src="6.jpg" alt="Forest">
+        </div>
+
+        <div id="scene7" class="scene">
+            <h2>Scene 7: Lily Learns to Be Grateful</h2>
+            <p>Lily sits down with her mom for lunch, and her mom gives her an apple. Lily learns to be grateful and says “thank you” to her mom.</p>
+            <img src="7.jpg" alt="Lunch">
+        </div>
+
+        <div id="scene8" class="scene">
+            <h2>Scene 8: Lily Faces a Challenge</h2>
+            <p>Lily feels a bit scared while climbing a small hill, but she gathers courage and takes it one step at a time. Eventually, she reaches the top and enjoys the beautiful view.</p>
+            <img src="8.jpg" alt="Hilltop">
+        </div>
+
+        <div id="scene9" class="scene">
+            <h2>Scene 9: Lily Learns Patience</h2>
+            <p>Lily plants a small tree seedling and waits for it to grow. She learns the value of patience and understands that growth takes time.</p>
+            <img src="9.jpg" alt="Tree Seedling">
+        </div>
+
+        <div id="scene10" class="scene">
+            <h2>Scene 10: Lily’s Bedtime Story</h2>
+            <p>After a fulfilling day, Lily lies in bed, and her mom tells her a bedtime story. Lily feels happy and content with her day and drifts off into a peaceful sleep.</p>
+            <img src="10.jpg" alt="Storytime">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Lily's Adventure. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for smooth scrolling to each scene when navigation is clicked
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
